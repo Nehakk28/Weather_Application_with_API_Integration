@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weatherly Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="logo">
+        <i class="fa-solid fa-cloud-sun"></i>
+        <h2>Weatherly</h2>
+    </div>
+<!-- Dashboard -->
+<section id="dashboardSection">
+</section>
+
+
+<!-- Favorites -->
+<section id="favoritesSection" class="hidden-section">
+    <h2>Favorite Cities</h2>
+    <div id="favorites"></div>
+</section>
+
+<!-- Weather Maps -->
+<section id="mapsSection" class="hidden-section">
+    <h2>Weather Maps</h2>
+
+    <iframe
+        src="https://embed.windy.com/embed2.html"
+        width="100%"
+        height="500"
+        frameborder="0">
+    </iframe>
+
+</section>
+
+<!-- Alerts -->
+<section id="alertsSection" class="hidden-section">
+    <h2>Weather Alerts</h2>
+    <div id="alertsContainer">
+        No weather alerts.
+    </div>
+</section>
+</aside>
+
+<main class="main-content">
+
+<header class="topbar">
+    <div class="search-box">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search city...">
+    </div>
+
+    <div class="actions">
+        <button id="searchBtn"><i class="fa-solid fa-search"></i></button>
+        <button id="locationBtn"><i class="fa-solid fa-location-crosshairs"></i></button>
+        <button id="unitToggle">°C</button>
+        <button id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+    </div>
+</header>
+
+<section class="hero">
+    <div>
+        
+        <p>Check today's weather and forecast.</p>
+    </div>
+</section>
+
+<section class="weather-section">
+
+<div class="weather-card">
+
+<div class="weather-info">
+    <div class="location">
+        <i class="fa-solid fa-location-dot"></i>
+        <span id="cityName">Kochi</span>
+    </div>
+
+    <p id="dateTime"></p>
+
+    <h1><span id="temperature">25</span>°</h1>
+
+    <h3 id="description">Light Rain</h3>
+
+    <button id="favoriteBtn">
+        <i class="fa-solid fa-star"></i>
+        Add to Favorites
+    </button>
+</div>
+
+<div class="weather-image">
+    <img id="weatherIcon" src="" alt="Weather Icon">
+</div>
+
+</div>
+
+<div class="details-grid">
+
+<div class="detail-card">
+<i class="fa-solid fa-temperature-half"></i>
+<h4>Feels Like</h4>
+<h2 id="feelsLike">--</h2>
+</div>
+
+<div class="detail-card">
+<i class="fa-solid fa-droplet"></i>
+<h4>Humidity</h4>
+<h2 id="humidity">--</h2>
+</div>
+
+<div class="detail-card">
+<i class="fa-solid fa-wind"></i>
+<h4>Wind</h4>
+<h2 id="wind">--</h2>
+</div>
+
+<div class="detail-card">
+<i class="fa-solid fa-gauge-high"></i>
+<h4>Pressure</h4>
+<h2 id="pressure">--</h2>
+</div>
+
+</div>
+
+</section>
+
+<section class="forecast-section">
+<h2>5-Day Forecast</h2>
+<div id="forecast" class="forecast-grid"></div>
+</section>
+
+<section class="hourly-section">
+<h2>Today's Forecast</h2>
+<div id="hourlyForecast" class="hourly-grid"></div>
+</section>
+
+<section class="bottom-grid">
+
+<!-- <div class="card">
+<h3>Air Quality</h3>
+<h1 id="aqiValue">--</h1>
+<p id="aqiStatus">Loading...</p>
+</div> -->
+<div class="card aqi-card">
+
+    <div class="card-title">
+        <i class="fa-solid fa-wind"></i>
+        <h3>Air Quality</h3>
+    </div>
+
+    <div class="aqi-circle">
+
+        <h1 id="aqiValue">1</h1>
+
+    </div>
+
+    <h4 id="aqiStatus">Good</h4>
+
+    <div class="aqi-bar">
+
+        <div class="aqi-fill"></div>
+
+    </div>
+
+</div>
+<!-- <div class="card">
+<h3>Sunrise & Sunset</h3>
+<div class="sun-item">
+<p>🌅 Sunrise</p>
+<h4 id="sunrise">--</h4>
+</div>
+<div class="sun-item">
+<p>🌇 Sunset</p>
+<h4 id="sunset">--</h4>
+</div> -->
+<div class="card sunrise-card">
+
+    <h3>
+
+        🌅 Sunrise & Sunset
+
+    </h3>
+
+    <div class="sun-container">
+
+        <div class="sun-box">
+
+            <i class="fa-solid fa-sun"></i>
+
+            <h4>Sunrise</h4>
+
+            <p id="sunrise">06:09</p>
+
+        </div>
+
+        <div class="sun-divider"></div>
+
+        <div class="sun-box">
+
+            <i class="fa-solid fa-moon"></i>
+
+            <h4>Sunset</h4>
+
+            <p id="sunset">18:50</p>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+</section>
+
+</main>
+
+<div id="loading" class="loading hidden">
+<div class="loader"></div>
+<p>Loading Weather...</p>
+</div>
+
+<div id="error" class="error hidden"></div>
+
+<script src="js/config.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/weatherService.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

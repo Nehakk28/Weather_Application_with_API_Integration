@@ -1,0 +1,280 @@
+/* ==========================================
+   Large Laptop
+========================================== */
+
+@media (max-width: 1400px) {
+
+    .weather-card {
+        padding: 30px;
+    }
+
+    .weather-info h1 {
+        font-size: 75px;
+    }
+
+}
+
+/* ==========================================
+   Laptop
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 230px;
+        margin: 15px;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bottom-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width: 992px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: calc(100% - 20px);
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sidebar nav ul li {
+        flex: 1 1 150px;
+        justify-content: center;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .actions {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .weather-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .weather-image img {
+        width: 160px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hourly-grid {
+        justify-content: flex-start;
+    }
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width: 768px) {
+
+    .logo h2 {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .weather-info h1 {
+        font-size: 60px;
+    }
+
+    .weather-info h3 {
+        font-size: 22px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions button {
+
+        width: 48px;
+        height: 48px;
+
+    }
+
+    .weather-image img {
+
+        width: 130px;
+
+    }
+
+    .detail-card {
+
+        padding: 18px;
+
+    }
+
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width: 576px) {
+
+    .sidebar {
+
+        padding: 20px;
+
+    }
+
+    .sidebar nav ul {
+
+        flex-direction: column;
+
+    }
+
+    .search-box {
+
+        padding: 12px 15px;
+
+    }
+
+    .search-box input {
+
+        font-size: 15px;
+
+    }
+
+    .weather-card {
+
+        padding: 25px;
+
+    }
+
+    .weather-info h1 {
+
+        font-size: 50px;
+
+    }
+
+    .weather-info h3 {
+
+        font-size: 20px;
+
+    }
+
+    #favoriteBtn {
+
+        width: 100%;
+
+    }
+
+    .forecast-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hour-item {
+
+        min-width: 80px;
+
+    }
+
+}
+
+/* ==========================================
+   Very Small Devices
+========================================== */
+
+@media (max-width: 400px) {
+
+    .logo {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .hero {
+
+        text-align: center;
+
+    }
+
+    .actions {
+
+        gap: 8px;
+
+    }
+
+    .actions button {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 14px;
+
+    }
+
+    .weather-info h1 {
+
+        font-size: 42px;
+
+    }
+
+    .detail-card h2 {
+
+        font-size: 22px;
+
+    }
+
+}
