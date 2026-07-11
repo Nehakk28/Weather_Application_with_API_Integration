@@ -5,7 +5,7 @@
 const CONFIG = {
 
     // OpenWeatherMap API Key
-    API_KEY: "67b94133c485d2e8f6bede2b584aa19c",
+    API_KEY: "YOUR_OPENWEATHER_API_KEY"
 
     // Base API URL
     BASE_URL: "https://api.openweathermap.org/data/2.5",
