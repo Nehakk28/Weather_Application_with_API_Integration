@@ -143,8 +143,3 @@ The application is optimized for:
 - Laptop
 - Tablet
 - Mobile Devices
-
-
-## ⭐ If you like this project
-
-Give this repository a ⭐ on GitHub.
