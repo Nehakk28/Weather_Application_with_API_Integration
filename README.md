@@ -37,9 +37,6 @@ A modern, responsive weather dashboard built using **HTML, CSS, and JavaScript**
 ```
 Weatherly/
 │
-├── assets/
-│   └── images/
-│
 ├── css/
 │   ├── style.css
 │   ├── responsive.css
